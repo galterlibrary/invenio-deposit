@@ -3,15 +3,14 @@
     "deposit-v1.0.0": {
       "properties": {
         "$schema": {
-            "type": "string",
-            "index": "not_analyzed"
+            "type": "text",
+            "index": false
         },
         "_deposit": {
           "type": "object",
           "properties": {
             "id": {
-              "type": "string",
-              "index": "not_analyzed"
+              "type": "keyword"
             },
             "pid": {
               "type": "object",
@@ -20,11 +19,10 @@
                   "type": "integer"
                 },
                 "type": {
-                  "type": "string"
+                  "type": "text"
                 },
                 "value": {
-                  "type": "string",
-                  "index": "not_analyzed"
+                  "type": "keyword"
                 }
               }
             },
@@ -35,7 +33,7 @@
                 "type": "integer"
             },
             "status": {
-              "type": "string"
+              "type": "text"
             }
           }
         },
@@ -43,27 +41,24 @@
           "type": "object",
           "properties": {
             "key": {
-              "type": "string",
-              "index": "not_analyzed"
+              "type": "keyword"
             },
             "bucket": {
-              "type": "string",
-              "index": "not_analyzed"
+              "type": "keyword"
             },
             "size": {
               "type": "integer"
             },
             "version_id": {
-              "type": "string",
-              "index": "not_analyzed"
+              "type": "keyword"
             }
           }
         },
         "title": {
-          "type": "string"
+          "type": "text"
         },
         "control_number": {
-          "type": "string"
+          "type": "text"
         }
       }
     }

@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "http://localhost/schemas/deposits/deposit-v1.0.0.json",
   "type": "object",
   "title": "Deposit schema.",
   "description": "Describe information needed for deposit module.",
@@ -74,16 +75,7 @@
         "id"
       ]
     },
-    "_files": {
-      "description": "Files",
-      "description": "Internal listing of files attached to deposit.",
-      "type": "array",
-      "name": "_files",
-      "items": {
-        "$ref": "../records-files/records-files-v1.0.0.json"
-      }
-    }
-  },
+
   "required": [
     "_deposit"
   ]
