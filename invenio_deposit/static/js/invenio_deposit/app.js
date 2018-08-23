@@ -24,12 +24,10 @@
 (function (angular) {
   // Bootstrap it!
   angular.element(document).ready(function() {
+
     angular.bootstrap(
       document.getElementById("invenio-records"), [
-        'invenioRecords', 'schemaForm', 'mgcrea.ngStrap',
-        'mgcrea.ngStrap.modal', 'pascalprecht.translate', 'ui.select',
-        'mgcrea.ngStrap.select', 'invenioFiles'
-      ]
+      'invenioRecords', 'schemaForm', 'mgcrea.ngStrap', 'mgcrea.ngStrap.modal', 'pascalprecht.translate', 'ui.sortable', 'ui.select', 'mgcrea.ngStrap.select', 'mgcrea.ngStrap.datepicker', 'mgcrea.ngStrap.helpers.dateParser', 'mgcrea.ngStrap.tooltip', 'invenioFiles'      ]
     );
   });
 })(angular);

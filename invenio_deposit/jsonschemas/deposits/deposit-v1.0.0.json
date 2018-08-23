@@ -75,7 +75,16 @@
         "id"
       ]
     },
-
+    "_files": {
+      "description": "Files",
+      "description": "Internal listing of files attached to deposit.",
+      "type": "array",
+      "name": "_files",
+      "items": {
+        "$ref": "../records-files/records-files-v1.0.0.json"
+      }
+    }
+  },
   "required": [
     "_deposit"
   ]

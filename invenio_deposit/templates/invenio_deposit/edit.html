@@ -24,6 +24,8 @@
 {%- extends config.DEPOSIT_BASE_TEMPLATE %}
 
 {%- block css %}
+    <!-- COMMENT -->
+    <link rel="stylesheet" type="text/css" href="">
     {% assets "invenio_deposit_css" %}<link href="{{ ASSET_URL }}" rel="stylesheet">{% endassets %}
     {{ super() }}
 {%- endblock css %}
@@ -42,7 +44,7 @@
             {% if pid %}
               initialization="{{ config.DEPOSIT_RECORDS_API.format(pid_value=pid.pid_value) }}"
             {% else %}
-              initialization="{{ config.DEPOSIT_SEARCH_API }}"
+              initialization="{{ config.DEPOSIT_SEARCH_API }}/"
             {% endif %}
             response-params='{{ config.DEPOSIT_RESPONSE_MESSAGES | tojson }}'
             extra-params='{"headers":{"Content-Type": "application/json"}}'
@@ -72,15 +74,14 @@
             {% else %}
               initialization="{{ config.DEPOSIT_SEARCH_API }}"
             {% endif %}
-            extra-params='{"headers":{"Content-Type": "application/json"}}'
-          >
+            extra-params='{"headers":{"Content-Type": "application/json"}}'>
             <invenio-files-upload-zone
               template="{{ url_for('static', filename='node_modules/invenio-files-js/dist/templates/upload.html') }}">
             </invenio-files-upload-zone>
             <invenio-files-list
               template="{{ url_for('static', filename='node_modules/invenio-files-js/dist/templates/list.html') }}"
             ></invenio-files-list>
-        </invenio-files-uploader>
+          </invenio-files-uploader>
         </div>
       </div>
     </div>
