@@ -66,3 +66,6 @@ examples/data/upload/*
 
 # temporary db
 tests/*.db
+
+# Editors
+*.sublime-*
