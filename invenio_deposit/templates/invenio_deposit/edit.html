@@ -21,10 +21,10 @@
 # as an Intergovernmental Organization or submit itself to any jurisdiction.
 #}
 
+
 {%- extends config.DEPOSIT_BASE_TEMPLATE %}
 
 {%- block css %}
-    <!-- COMMENT -->
     <link rel="stylesheet" type="text/css" href="">
     {% assets "invenio_deposit_css" %}<link href="{{ ASSET_URL }}" rel="stylesheet">{% endassets %}
     {{ super() }}
@@ -72,9 +72,11 @@
             {% if pid %}
               action="{{ config.DEPOSIT_RECORDS_API|format(pid_value=pid.pid_value) }}"
             {% else %}
-              initialization="{{ config.DEPOSIT_SEARCH_API }}"
+              initialization="{{ config.DEPOSIT_SEARCH_API }}/"
             {% endif %}
-            extra-params='{"headers":{"Content-Type": "application/json"}}'>
+            extra-params='{"headers":{"Content-Type": "application/json"}}'
+            {# TODO: Move extract_files from our data model to invenio-deposit and make a PR? #}
+            files='{{record|extract_files|tojson}}'>
             <invenio-files-upload-zone
               template="{{ url_for('static', filename='node_modules/invenio-files-js/dist/templates/upload.html') }}">
             </invenio-files-upload-zone>
