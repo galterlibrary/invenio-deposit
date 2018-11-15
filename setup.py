@@ -71,12 +71,12 @@ install_requires = [
     'dictdiffer>=0.5.0.post1',
     'elasticsearch>=2.0.0,<6.3.0',
     'elasticsearch-dsl>=2.0.0,<6.3.0',
-    'invenio-assets>=1.0.1',  # Trying out
+    'invenio-assets>=1.1.0',  # Trying out
     'invenio-db[versioning]>=1.0.1',  # Trying out
-    'invenio-files-rest>=0.9.0',  # WARNING: may be problematic
+    'invenio-files-rest>=0.9.0',  # WARNING: may be problematic -- seems good
     'invenio-jsonschemas>=1.0.0',
     'invenio-oauth2server>=1.0.1',
-    'invenio-records-files>=0.9.0',  # WARNING: may be problematic
+    'invenio-records-files>=0.9.0',  # WARNING: may be problematic -- seems good
     'invenio-records-rest>=1.0.1',  # invenio-records-rest>=1.1.0,<1.2.0 in instance
     'invenio-records-ui>=1.0.1',
     'invenio-search-ui>=1.0.1',
