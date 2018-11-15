@@ -73,10 +73,10 @@ install_requires = [
     'elasticsearch-dsl>=2.0.0,<6.3.0',
     'invenio-assets>=1.0.1',  # Trying out
     'invenio-db[versioning]>=1.0.1',  # Trying out
-    'invenio-files-rest>=1.0.0',  # WARNING: may be problematic
+    'invenio-files-rest>=0.9.0',  # WARNING: may be problematic
     'invenio-jsonschemas>=1.0.0',
     'invenio-oauth2server>=1.0.1',
-    'invenio-records-files>=1.0.0',  # WARNING: may be problematic
+    'invenio-records-files>=0.9.0',  # WARNING: may be problematic
     'invenio-records-rest>=1.0.1',  # invenio-records-rest>=1.1.0,<1.2.0 in instance
     'invenio-records-ui>=1.0.1',
     'invenio-search-ui>=1.0.1',
