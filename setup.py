@@ -71,16 +71,16 @@ install_requires = [
     'dictdiffer>=0.5.0.post1',
     'elasticsearch>=2.0.0,<6.3.0',
     'elasticsearch-dsl>=2.0.0,<6.3.0',
-    'invenio-assets>=1.0.0b6',
-    'invenio-db[versioning]>=1.0.0b3',
-    'invenio-files-rest>=1.0.0a14',
-    'invenio-jsonschemas>=1.0.0a3',
-    'invenio-oauth2server>=1.0.0a12',
-    'invenio-records-files>=1.0.0a8',
-    'invenio-records-rest>=1.0.0b5',
-    'invenio-records-ui>=1.0.0a8',
-    'invenio-search-ui>=1.0.0a5',
-    'invenio-search>=1.0.0a11',
+    'invenio-assets>=1.0.1',  # Trying out
+    'invenio-db[versioning]>=1.0.1',  # Trying out
+    'invenio-files-rest>=1.0.0',  # WARNING: may be problematic
+    'invenio-jsonschemas>=1.0.0',
+    'invenio-oauth2server>=1.0.1',
+    'invenio-records-files>=1.0.0',  # WARNING: may be problematic
+    'invenio-records-rest>=1.0.1',  # invenio-records-rest>=1.1.0,<1.2.0 in instance
+    'invenio-records-ui>=1.0.1',
+    'invenio-search-ui>=1.0.1',
+    'invenio-search>=1.0.1',  # WARNING: could cause urllib/elasticsearch issues
 ]
 
 packages = find_packages()
