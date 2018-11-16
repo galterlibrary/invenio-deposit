@@ -79,7 +79,7 @@ install_requires = [
     'invenio-records-files>=0.9.0',  # WARNING: may be problematic -- seems good
     'invenio-records-rest>=1.0.1',  # invenio-records-rest>=1.1.0,<1.2.0 in instance
     'invenio-records-ui>=1.0.1',
-    'invenio-search-ui>=1.0.1',
+    'invenio-search-ui>=1.0.1,<1.1.0',
     'invenio-search>=1.0.1',  # WARNING: could cause urllib/elasticsearch issues
 ]
 
