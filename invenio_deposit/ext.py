@@ -87,7 +87,9 @@ class InvenioDeposit(object):
         """
         self.init_config(app)
         app.register_blueprint(ui.create_blueprint(
-            app.config['DEPOSIT_RECORDS_UI_ENDPOINTS']
+            app.config['DEPOSIT_RECORDS_UI_ENDPOINTS'],
+            app.config['DEPOSIT_UI_INDEX_URL'],
+            app.config['DEPOSIT_UI_NEW_URL']
         ))
         app.extensions['invenio-deposit'] = _DepositState(app)
         if app.config['DEPOSIT_REGISTER_SIGNALS']:
