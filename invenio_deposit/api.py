@@ -122,7 +122,7 @@ def preserve(method=None, result=True, fields=None):
         replace = result_ if result else self
         for field in data:
             replace[field] = data[field]
-        return result_
+        return replace
     return wrapper
 
 
