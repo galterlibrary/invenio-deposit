@@ -173,11 +173,18 @@ The structure of the dictionary is as follows:
     }
 """
 
+
 DEPOSIT_UI_ENDPOINT = '{scheme}://{host}/deposit/{pid_value}'
 """The UI endpoint for depositions with pid."""
 
+DEPOSIT_UI_INDEX_URL = '/deposits'
+"""The UI endpoint for the index page."""
+
 DEPOSIT_UI_INDEX_TEMPLATE = 'invenio_deposit/index.html'
 """Template for the index page."""
+
+DEPOSIT_UI_NEW_URL = '/deposits/new'
+"""The UI endpoint for the new deposit page."""
 
 DEPOSIT_UI_NEW_TEMPLATE = 'invenio_deposit/edit.html'
 """Template for a new deposit page."""

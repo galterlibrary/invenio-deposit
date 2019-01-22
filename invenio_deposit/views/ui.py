@@ -36,7 +36,7 @@ from invenio_records_ui.signals import record_viewed
 from ..proxies import current_deposit
 
 
-def create_blueprint(endpoints):
+def create_blueprint(endpoints, index_url, new_url):
     """Create Invenio-Deposit-UI blueprint.
 
     See: :data:`invenio_deposit.config.DEPOSIT_RECORDS_UI_ENDPOINTS`.
@@ -69,13 +69,13 @@ def create_blueprint(endpoints):
         options.pop('schemaform', None)
         blueprint.add_url_rule(**create_url_rule(endpoint, **options))
 
-    @blueprint.route('/deposit')
+    @blueprint.route(index_url)
     @login_required
     def index():
         """List user deposits."""
         return render_template(current_app.config['DEPOSIT_UI_INDEX_TEMPLATE'])
 
-    @blueprint.route('/deposit/new')
+    @blueprint.route(new_url)
     @login_required
     def new():
         """Create new deposit."""
