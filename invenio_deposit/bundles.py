@@ -82,7 +82,9 @@ js_dependecies_schema_form = NpmBundle(
     'node_modules/invenio-records-js/dist/invenio-records-js.js',
     npm={
         'angular-schema-form': '~0.8.13',
-        'invenio-records-js': '0.0.6',
+        'invenio-records-js':
+            'git://github.com/galterlibrary/invenio-records-js'
+            '.git#bb4abf3513bfe6c2f771b2f840b6b2118cdbcec6',
         'objectpath': '~1.2.1',
         'tv4': '~1.2.7',
     }
